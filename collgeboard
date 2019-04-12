@@ -1,1 +1,17 @@
+import random
+import math
+
+print("Welcome to pick your path.")
+print("Please be exact and do not misspell words as it will break the game.")
+a = input("Press a to continue.")
+#start
+if a == a:
+    print("You wake up in a dark gloomy room.")
+    print("In this room there are two doors; a right door and a left door.")
+    print("The right door has a bright red EXIT sign above it and the left door has a blue EXIT sign.")
+    print("The blue sign is constantly light up but the red one flickers.")
+    b = input("Which door do you choose? Right or Left")
+    if b == "Right":
+        print()
+          
 
