@@ -1,49 +1,45 @@
 import random
 import math
 import turtle
-
-print("Welcome to pick your path.")
-print("Please be exact and do not misspell words as it will break the game.")
-a = input("Press a to continue.")
-#start
-if a == a:
-    print("You wake up in a dark gloomy room.")
-    print("In this room there are two doors; a right door and a left door.")
-    print("The right door has a bright red EXIT sign above it and the left door has a blue EXIT sign.")
-    print("The blue sign is constantly light up but the red one flickers.")
-    b = input("Which door do you choose? Right or Left")
-#right door1
-if b == "Right" or "right":
-    print("you decided to pick the right door.")
-    print("As you walk through, you hear the door click behind you.")
-    print("In front of you there is a chandalier, providing a good amount of light.")
-    c = input("In the room you are able to see a right lever and a left lever. Which do you pick?")
-#left door1    
-if b == "left" or " Left":
+playagain = "yes"
+while (playagain == "yes"):
+    print("Welcome to pick your path.")
+    print("Please be exact and do not misspell words as it will break the game.")
+    a = input("Press a to continue.")
+    #start
+    if a == a:
+        print("You wake up in a dark gloomy room.")
+        print("In this room there are two doors; a right door and a left door.")
+        print("The right door has a bright red EXIT sign above it and the left door has a blue EXIT sign.")
+        print("The blue sign is constantly light up but the red one flickers.")
+        b = input("Which door do you choose? Right or Left")
+    #right door1
+    if b == "Right" or "right":
+        print("you decided to pick the right door.")
+        print("As you walk through, you hear the door click behind you.")
+        print("In front of you there is a chandalier, providing a good amount of light.")
+        c = input("In the room you are able to see a right lever and a left lever. Which do you pick?")
+        if c == "Left" or "left":
+            print("The floor colapses below you and you fall into giant spikes you have DIED!")
+            turtle.write("YOU HAVE DIED!", font=("Segoe Script", 50, "normal"))
+            playagain = input("Keep Playing? yes or no.")
+        else:
+                          
+            print("The door infront of you swings open.")
+            print("You see many flickering lights on what seems to be a control board.")
+            print("Above it are TV screens with videos running, with titles of CAM 001-025.")
+            print("You see yourself standing on CAM 013.")
+            d = input("To your right is a door with a EXIT sign to your right which seems to lead outside or approach the conrtol pannel to your left?")
     
-    print()
-#died left lever2
-if c == "Left" or "left":
-    print("The floor colapses below you and you fall into giant spikes you have DIED!")
-    #turtleLetter("Y",tur)
-    #turtleLetter("O",tur)
-    #turtleLetter("U",tur)
-    #turtleLetter("D",tur)
-    #turtleLetter("I",tur)
-    #turtleLetter("E",tur)
-    #turtleLetter("D",tur)
-if c == "Right" or "right":              
-    print("The door infront of you swings open.")
-    print("You see many flickering lights on what seems to be a control board.")
-    print("Above it are TV screens with videos running, with titles of CAM 001-025.")
-    print("You see yourself standing on CAM 013.")
-    d = input("To your right is a door with a EXIT sign to your right which seems to lead outside or approach the conrtol pannel to your left?")
-if d == "right" or "Right":
-    print("You touch the doors handle and immediately feel electric pulse through your body.")
-    print("The room fades to black....")
-    print('YOU HAVE DIED.')
-if d == "left" or "Left":
-    print("You head over to the control pannel and mess around looking through the CAMS.")
-    print("You then notice a box next to the control pannel.")
-    print("You see a keypad on it.")
-    print("")
+
+        
+    if d == "right" or "Right":
+        print("You touch the doors handle and immediately feel electric pulse through your body.")
+        print("The room fades to black....")
+        print('YOU HAVE DIED.')
+    else:
+        print("You head over to the control pannel and mess around looking through the CAMS.")
+        print("You then notice a box next to the control pannel.")
+        print("You see a keypad on it.")
+        print("")
+
