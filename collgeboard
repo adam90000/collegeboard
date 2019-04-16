@@ -2,6 +2,7 @@ import random
 import math
 import turtle
 playagain = "yes"
+
 while (playagain == "yes"):
     print("Welcome to pick your path.")
     print("Please be exact and do not misspell words as it will break the game.")
@@ -9,9 +10,7 @@ while (playagain == "yes"):
     #start
     if a == a:
         print("You wake up in a dark gloomy room.")
-        print("In this room there are two doors; a right door and a left door.")
-        print("The right door has a bright red EXIT sign above it and the left door has a blue EXIT sign.")
-        print("The blue sign is constantly light up but the red one flickers.")
+        print("In this room there are two doors; a right door and a left door with exit signs above them.")
         b = input("Which door do you choose? Right or Left")
     #right door1
     if b == "Right" or "right":
@@ -19,27 +18,37 @@ while (playagain == "yes"):
         print("As you walk through, you hear the door click behind you.")
         print("In front of you there is a chandalier, providing a good amount of light.")
         c = input("In the room you are able to see a right lever and a left lever. Which do you pick?")
-        if c == "Left" or "left":
-            print("The floor colapses below you and you fall into giant spikes you have DIED!")
-            turtle.write("YOU HAVE DIED!", font=("Segoe Script", 50, "normal"))
-            playagain = input("Keep Playing? yes or no.")
-        else:
-                          
-            print("The door infront of you swings open.")
-            print("You see many flickering lights on what seems to be a control board.")
-            print("Above it are TV screens with videos running, with titles of CAM 001-025.")
-            print("You see yourself standing on CAM 013.")
-            d = input("To your right is a door with a EXIT sign to your right which seems to lead outside or approach the conrtol pannel to your left?")
-    
 
-        
-    if d == "right" or "Right":
+
+
+    if c == "right" or c == "Right":
+        print("The door infront of you swings open.")
+        print("You see many flickering lights on what seems to be a control board.")
+        print("Above it are TV screens with videos running, with titles of CAM 001-025.")
+        print("You see yourself standing on CAM 013.")
+        d = input("To your right is a door with a EXIT sign to your right which seems to lead outside or approach the conrtol pannel to your left?")
+    if c == "left" or c == "Left":
+        print("The floor colapses below you and you fall into giant spikes you have DIED!")
+        playagain = input("Keep Playing? yes or no.")
+
+
+
+    if d == "right" or d == "Right" :
         print("You touch the doors handle and immediately feel electric pulse through your body.")
         print("The room fades to black....")
         print('YOU HAVE DIED.')
+        playagain = input("Keep Playing? yes or no.")
     else:
-        print("You head over to the control pannel and mess around looking through the CAMS.")
+        print("You head over to the control pannel.You see a note on the control pannel and you pick it up.")
+        print("You see the following numbers:66,23,22,2.")
+        print('On the pannel it says "MINUS ADD ADD"')
         print("You then notice a box next to the control pannel.")
         print("You see a keypad on it.")
-        print("")
-
+        print("It looks like a calculator.")
+        e = input("INPUT AWNSER HERE")
+    if e == range(0,66) or  e == range(68,100)
+        print("ACSESS DENIDED")
+        playagain = input("Keep Playing? yes or no.")
+    if e == 67:
+        print("ACSESS GRANTED")
+        
