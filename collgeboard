@@ -512,13 +512,14 @@ while (playagain == "yes"):
         print("In this room there are two doors; a right door and a left door with exit signs above them.")
         b = input("Which door do you choose? Right or Left")
     #right door1
-    if b == "Right" or "right":
+    if b == "Right" or b == "right":
         print("you decided to pick the right door.")
         print("As you walk through, you hear the door click behind you.")
         print("In front of you there is a chandalier, providing a good amount of light.")
         c = input("In the room you are able to see a right lever and a left lever. Which do you pick?")
-
-
+    elif b == "left" or b == "Left":
+        print("Door is locked.")
+        playagain = input("Go back")
 
     if c == "right" or c == "Right":
         print("The door infront of you swings open.")
@@ -526,63 +527,77 @@ while (playagain == "yes"):
         print("Above it are TV screens with videos running, with titles of CAM 001-025.")
         print("You see yourself standing on CAM 013.")
         d = input("To your right is a door with a EXIT sign to your right which seems to lead outside or approach the conrtol pannel to your left?")
-    if c == "left" or c == "Left":
+        if d == "right" or d == "Right" :
+            print("You touch the doors handle and immediately feel electric pulse through your body.")
+            print("The room fades to black....")
+            print('YOU HAVE DIED.')
+            playagain = input("Keep Playing? yes or no.")
+        else:
+            print("You head over to the control pannel.You see a note on the control pannel and you pick it up.")
+            print("You see the following numbers:66,23,22,2.")
+            print('On the pannel it says "MINUS ADD ADD"')
+            print("You then notice a box next to the control pannel.")
+            print("You see a keypad on it.")
+            print("It looks like a calculator.")
+            e = input("INPUT AWNSER HERE")
+            if e == range(0,66) or  e == range(68,100):
+                print("ACSESS DENIDED")
+                playagain = input("Keep Playing? yes or no.")
+            else:
+                print("ACSESS GRANTED")
+                print("You walk in and you see 2 doors with windows.")
+                print("You see two people in both windows. They both have a key card hooked onto there shirt one is green and one is red.")
+                f = input("The door with the red card is right and the green is left which do you choose.")
+                if f == "right" or f == "Right":
+                    print("you walk in and he shoots you with a extremly high voltage taser and you DIE.")
+                    playagain = input("Keep Playing? yes or no.")
+                else:
+                    print("You walk in you see the man is friendly and he say hello.")
+                    print("You have two options take him with you to the start and open the locked door or go through one of the two doors behind him.")
+                    g = input('Which do you choose go back to the start or walk through one of the 2 doors "type start to go back or type right or left to go through one of the doors.')
+
+                    if g == "Right" or g == "right":
+                        print("YOU WIN YOU HAVE ESCAPED")
+                        turtleLetter("W",tur)
+                        turtleLetter("I",tur)
+                        turtleLetter("N",tur)
+                        turtleLetter("N",tur)
+                        turtleLetter("E",tur)
+                        turtleLetter("R",tur)
+                        window.exitonclick()                                        
+                    elif g == "left" or g == "Left":
+                        print("You step out side and get knocked out by gas you have DIED!")
+                        playagain = input("Keep Playing? yes or no.")
+                    elif g == "start" or g == "Start":
+                        print("You walk back to the start with the guy and he swipes his key card and it opens.")
+                        print("There is one door in the back of the room with two swords on the table.")
+                        print('Someone over the loud speaker says "FIGHT FOR YOUR FREEDOM".')
+                        print('"for fighting a for first option b for second"')
+                        h = input('The man and yourself both pick up a weapon he swings first and exsposes his left side "a" to hit left side "b" defend.')
+                        if h == "a" or h == "A":
+                            print("You swing for it but you exspose your head and he cuts it off and you DIE!")
+                            playagain = input("Keep Playing? yes or no.")
+                        elif h == "b" or "B":
+                            i = input('You block his shot then you have another chance to hit."press a to have a finishing shot press b to block"')
+                            if i == "a" or i == "A":
+                                print("You deafeated him and you walk out.")
+                                print("YOU WIN YOU HAVE ESCAPED")
+                                turtleLetter("W",tur)
+                                turtleLetter("I",tur)
+                                turtleLetter("N",tur)
+                                turtleLetter("N",tur)
+                                turtleLetter("E",tur)
+                                turtleLetter("R",tur)
+                                window.exitonclick()
+                            elif i == "b" or i == "B":
+                                print("Your defense did not work you have died....")
+                                playagain = input("Keep Playing? yes or no.")
+
+    elif c == "left" or c == "Left":
         print("The floor colapses below you and you fall into giant spikes you have DIED!")
         playagain = input("Keep Playing? yes or no.")
 
 
 
-    elif d == "right" or d == "Right" :
-        print("You touch the doors handle and immediately feel electric pulse through your body.")
-        print("The room fades to black....")
-        print('YOU HAVE DIED.')
-        playagain = input("Keep Playing? yes or no.")
-    else:
-        print("You head over to the control pannel.You see a note on the control pannel and you pick it up.")
-        print("You see the following numbers:66,23,22,2.")
-        print('On the pannel it says "MINUS ADD ADD"')
-        print("You then notice a box next to the control pannel.")
-        print("You see a keypad on it.")
-        print("It looks like a calculator.")
-        e = input("INPUT AWNSER HERE")
-            
-        if e == range(0,66) or  e == range(68,100):
-            print("ACSESS DENIDED")
-            playagain = input("Keep Playing? yes or no.")
-        else:
-            print("ACSESS GRANTED")
-            print("You walk in and you see 2 doors with windows.")
-            print("You see two people in both windows. They both have a key card hooked onto there shirt one is green and one is red.")
-            f = input("The door with the red card is right and the green is left which do you choose.")
-            if f == "right" or f == "Right":
-                print("you walk in and he shoots you with a extremly high voltage taser and you DIE.")
-                playagain = input("Keep Playing? yes or no.")
-            else:
-                print("You walk in you see the man is friendly and he say hello.")
-                print("You have two options take him with you to the start and open the locked door or go through one of the two doors behind him.")
-                g = input('Which do you choose go back to the start or walk through one of the 2 doors "type start to go back or type right or left to go through one of the doors.')
 
-                if g == "Right" or g == "right":
-                    print("YOU WIN YOU HAVE ESCAPED")
-                    turtleLetter("W",tur)
-                    turtleLetter("I",tur)
-                    turtleLetter("N",tur)
-                    turtleLetter("N",tur)
-                    turtleLetter("E",tur)
-                    turtleLetter("R",tur)
-                    window.exitonclick()                                        
-                elif g == "left" or g == "Left":
-                    print("You step out side and get knocked out by gas you have DIED!")
-                    playagain = input("Keep Playing? yes or no.")
-                elif g == "start" or g == "Start":
-                    print("You walk back to the start with the guy and he swipes his key card and it opens.")
-                    print("There is one door in the back of the room with two swords on the table.")
-                    print('Someone over the loud speaker says "FIGHT FOR YOUR FREEDOM".')
-                    print('"for fighting a for first option b for second"')
-                    h = input('The man and yourself both pick up a weapon he swings first and exsposes his left side "a" to hit left side "b" defend.')
-                    if h == "a" or h == "A":
-                        print("You swing for it but you exspose your head and he cuts it off and you DIE!")
-                        playagain = input("Keep Playing? yes or no.")
-                    elif h == "b" or "B":
        
-
